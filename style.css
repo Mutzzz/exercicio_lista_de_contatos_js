@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 2%, rgba(9,121,76,1) 27%, rgba(0,212,255,1) 71%);
+    
+}
+
+.container{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 60px;
+    width: 40%;
+    align-items: center;
+    color: #2b344b;
+}
+
+header{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#nome, #telefone, #enviar{
+    margin-bottom: 15px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+#nome, #telefone{
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+input[type="text"]:focus, input[type="tel"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+    }
+
+#enviar{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 8px 13px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+
+}
+
+#enviar:hover{
+    background-color:rgb(14, 161, 58);
+}
+
+table th{
+    padding-right:30px;
+    font-size: 20px;
+    background-color:#4caf4f59;
+    padding-left: 2px;
+
+    
+}
+
+table td{
+    padding-top: 20px;
+    background-color: #cccccc54;
+    font-weight: bold;
+    padding-left: 5px;
+    
+}
+
+
+
+
+
+
