@@ -1,7 +1,7 @@
 const form = document.getElementById('form-convidados');
-    let linhas = [];
-    const nomeContato = document.getElementById('nome');
-    const telefoneContato = document.getElementById('telefone');
+let linhas = [];
+const nomeContato = document.getElementById('nome');
+const telefoneContato = document.getElementById('telefone');
 
 form.addEventListener('submit', function(e){
     e.preventDefault();
@@ -9,21 +9,10 @@ form.addEventListener('submit', function(e){
     atualizaTabela();
 });
 
-function verificaIgual () {
-    const novoNome = nomeContato.value;
-
-    const novoTelefone = telefoneContato.value;
-    if (linhas.some(linha => linha.includes(novoNome) || linha.includes(novoTelefone))) {
-        alert('Nome ou número já existente na tabela. Por favor, insira valores únicos.');
+function adicionaLinha() {
+    if (verificaIgual()) {
         return;
     }
-}
-
-
-function adicionaLinha() {
-    verificaIgual();
-
-
 
     let linha = '<tr>';
     linha += `<td>${nomeContato.value}</td>`;
@@ -36,7 +25,19 @@ function adicionaLinha() {
     telefoneContato.value = '';
 }
 
+function verificaIgual() {
+    const novoNome = nomeContato.value;
+    const novoTelefone = telefoneContato.value;
+
+    if (linhas.some(linha => linha.includes(novoNome) || linha.includes(novoTelefone))) {
+        alert('Nome ou número já existente na tabela. Por favor, insira valores únicos.');
+        return true;
+    }
+
+    return false;
+}
+
 function atualizaTabela() {
     const corpoTabela = document.querySelector('tbody');
-    corpoTabela.innerHTML = linhas;
+    corpoTabela.innerHTML = linhas.join('');
 }
