@@ -84,6 +84,37 @@ table td{
     padding-left: 5px;
 }
 
+.delete-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: darkred;
+}
+
+.tabela {
+    display: table;
+}
+
+.linha {
+    display: table-row;
+}
+
+.celula {
+    display: table-cell;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+}
+
+.delete-button {
+    display: block;
+    margin: 5px auto;
+}
+
 
 
 
